@@ -2,8 +2,13 @@
 
 namespace CallCenterOne.Interfaces
 {
-    public class ICustomerService
+    public interface ICustomerService
     {
-        Customer GetCustomer(int id);
+        Customer GetCustomerById(int id);
+        ICollection<Customer> GetAllCustomers();
+        bool CreateCustomer();
+        bool UpdateCustomer(Customer customer);
+        bool DeleteCustomer(Customer customer);
     }
+
 }
