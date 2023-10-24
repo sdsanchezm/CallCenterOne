@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CallCenterOne.Models
 {
@@ -12,6 +13,9 @@ namespace CallCenterOne.Models
         public string Address { get; set; }
         public string ZipCode { get; set; }
         public Store Store { get; set; }
+
+        [ForeignKey(nameof(Country))]
+        public int CountryId { get; set; }
         public Country Country { get; set; }
         public City City { get; set; }
         public Priority Priority1 { get; set; }

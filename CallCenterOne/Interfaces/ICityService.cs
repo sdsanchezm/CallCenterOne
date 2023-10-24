@@ -7,7 +7,9 @@ namespace CallCenterOne.Interfaces
         City GetCityById(int id);
         ICollection<City> GetAllCities();
         bool CreateCity();
-        bool UpdateCity(int id);
+        bool UpdateCity(City city);
         bool DeleteCity(int id);
+        bool Save();
+        bool CityExists(int id);
     }
 }

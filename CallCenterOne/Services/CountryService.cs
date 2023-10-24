@@ -3,29 +3,29 @@ using CallCenterOne.Models;
 
 namespace CallCenterOne.Services
 {
-    public class CountryService : ICityService
+    public class CountryService : ICountryService
     {
-        public bool CreateCity()
+        public bool CreateCountry()
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteCity(int id)
+        public bool DeleteCountry(Customer customer)
         {
             throw new NotImplementedException();
         }
 
-        public ICollection<City> GetAllCities()
+        public ICollection<Country> GetAllCountry()
         {
             throw new NotImplementedException();
         }
 
-        public City GetCityById(int id)
+        public Country GetCountryById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateCity(int id)
+        public bool UpdateCountry(Customer customer)
         {
             throw new NotImplementedException();
         }

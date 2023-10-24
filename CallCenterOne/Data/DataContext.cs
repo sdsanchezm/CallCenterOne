@@ -5,7 +5,6 @@ namespace CallCenterOne.Data
 {
     public class DataContext : DbContext
     {
-
         public DataContext(DbContextOptions<DataContext> options) : base (options) { }
 
         public DbSet<Customer> CustomerDbSet { get; set; }
@@ -23,8 +22,8 @@ namespace CallCenterOne.Data
 
             modelBuilder.Entity<Customer>()
                 .HasOne(c => c.City) // this City is from the customer Model
-                .WithOne(s => s.Customer) // this customer is from the city Model
-                .HasForeignKey<City>(c => c.CustomerId); // This CustomerId is from the StoreModel
+                .WithOne() // this customer is from the city Model
+                .HasForeignKey<Customer>(p => p.Id); // This CustomerId is from the StoreModel
 
             modelBuilder.Entity<Customer>()
                 .HasOne(c => c.Country)
